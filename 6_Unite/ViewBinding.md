@@ -4,7 +4,8 @@ View Binding yapısı, ArrayList kullanımı ve Nesne Yönelimli Programlama (OO
 🏗️ 1. Adım: View Binding Aktif Etme
 Android Studio'da arayüz elemanlarına (buton, metin vb.) en güvenli ve hızlı şekilde ulaşmak için build.gradle (Module :app) dosyasında bu özelliği açmamız gerekir:
 
-build.gradle (Module :app)
+build.gradle (Module 
+:app)
 android {
     // ... diğer ayarlar
     buildFeatures {
