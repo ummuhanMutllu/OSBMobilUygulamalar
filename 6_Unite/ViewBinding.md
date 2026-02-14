@@ -1,24 +1,29 @@
-🌸 Resim Değiştirme Uygulaması (View Binding Örneği)
+# Resim Değiştirme Uygulaması (View Binding Örneği)
+
 View Binding yapısı, ArrayList kullanımı ve Nesne Yönelimli Programlama (OOP) konularını kapsar.
 
 🏗️ 1. Adım: View Binding Aktif Etme
 Android Studio'da arayüz elemanlarına (buton, metin vb.) en güvenli ve hızlı şekilde ulaşmak için build.gradle (Module :app) dosyasında bu özelliği açmamız gerekir:
 
-build.gradle (Module 
-:app)
+**build.gradle** (Module :app)
+```gradle
 android {
     // ... diğer ayarlar
     buildFeatures {
         viewBinding = true
     }
 }
-Not: Bu işlemden sonra sağ üstteki "Sync Now" butonuna basmayı unutmayın.
+```
+
+**Not:** Bu işlemden sonra sağ üstteki "Sync Now" butonuna basmayı unutmayın.
 
 Projeye 2 Buton, 1 Textview, 1 tane de ImageView ekleyiniz.
 
-📦 2. Adım: Veri Modeli (cicek.java)
+## 📦 2. Adım: Veri Modeli (cicek.java)
+
 Her bir çiçeğin bilgisini, resmini ve sıra numarasını bir arada tutmak için bir sınıf oluşturuyoruz.
 
+```java
 public class cicek {
     String bilgi; // Çiçeğin ismi
     int gorsel;   // Resmin ID'si (R.drawable.resim_adi)
@@ -31,10 +36,13 @@ public class cicek {
         this.siraNo = siraNo;
     }
 }
-🚀 3. Adım: Uygulama Mantığı (MainActivity.java)
+```
+
+## 🚀 3. Adım: Uygulama Mantığı (MainActivity.java)
+
 Burada listemizi oluşturuyor ve butonlara basıldığında resmin değişmesini sağlıyoruz.
 
-Java
+```java
 package com.example.resimDegistir;
 
 import android.os.Bundle;
@@ -62,6 +70,7 @@ public class MainActivity extends AppCompatActivity {
         cicek lale = new cicek("Lale", R.drawable.lale, 2);
         
         cicekArrayList.add(manolya);
+        
         cicekArrayList.add(lale);
 
         // Uygulama açıldığında ilk çiçeği göster
@@ -87,3 +96,4 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 }
+```
